@@ -1,0 +1,112 @@
+/*
+ * FONT LOADING
+ * ------------
+ * Every face below points at a real file in `public/fonts/`, so the browser can
+ * actually fetch it. Rules:
+ *   - `font-display: swap` so text is readable immediately.
+ *   - `format("truetype")` matches the actual .ttf payload.
+ *   - Absolute `/fonts/...` paths so the URL resolves the same from `/`,
+ *     `/artworks/slug` and any nested route in production.
+ *   - A metric-overridden fallback (`VazirmatnFallback`) keeps line boxes the
+ *     same size before and after the webfont lands, so the layout does not jump.
+ */
+
+/* ---- Vazirmatn (body, 9 weights) ---- */
+@font-face {
+	font-family: "Vazirmatn";
+	src: url("/fonts/Vazirmatn-UI-FD-Thin.ttf") format("truetype");
+	font-weight: 100;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Vazirmatn";
+	src: url("/fonts/Vazirmatn-UI-FD-ExtraLight.ttf") format("truetype");
+	font-weight: 200;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Vazirmatn";
+	src: url("/fonts/Vazirmatn-UI-FD-Light.ttf") format("truetype");
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Vazirmatn";
+	src: url("/fonts/Vazirmatn-UI-FD-Regular.ttf") format("truetype");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Vazirmatn";
+	src: url("/fonts/Vazirmatn-UI-FD-Medium.ttf") format("truetype");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Vazirmatn";
+	src: url("/fonts/Vazirmatn-UI-FD-SemiBold.ttf") format("truetype");
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Vazirmatn";
+	src: url("/fonts/Vazirmatn-UI-FD-Bold.ttf") format("truetype");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Vazirmatn";
+	src: url("/fonts/Vazirmatn-UI-FD-ExtraBold.ttf") format("truetype");
+	font-weight: 800;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Vazirmatn";
+	src: url("/fonts/Vazirmatn-UI-FD-Black.ttf") format("truetype");
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* ---- IRANYekanX (display / headings) ---- */
+@font-face {
+	font-family: "IranYekanX";
+	src: url("/fonts/IRANYekanXFaNum-Regular.ttf") format("truetype");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "IranYekanX";
+	src: url("/fonts/IRANYekanXFaNum-Bold.ttf") format("truetype");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* ---- Yekan (legacy, kept because older content may still ask for it) ---- */
+@font-face {
+	font-family: "YekanLegacy";
+	src: url("/fonts/Yekan.ttf") format("truetype");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* ---- Metric-matched fallback: prevents the pre/post-load layout shift ---- */
+@font-face {
+	font-family: "VazirmatnFallback";
+	src: local("Tahoma"), local("Arial");
+	size-adjust: 96%;
+	ascent-override: 90%;
+	descent-override: 24%;
+	line-gap-override: 0%;
+}

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="color-scheme" content="light" />
+		<meta name="theme-color" content="#F7F5F1" />
+
+		<!--
+			Every brand string below is a placeholder slot filled at runtime from
+			Site Settings (see src/lib/branding.ts). Nothing here is the real,
+			hardcoded identity of the site.
+		-->
+		<title data-brand="title">پورتفولیوی هنرمند</title>
+		<meta name="description" data-brand="description" content="" />
+		<link rel="icon" data-brand="favicon" href="/favicon.svg" />
+
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content="" />
+		<meta property="og:title" data-brand="og:title" content="" />
+		<meta property="og:description" data-brand="og:description" content="" />
+		<meta property="og:image" data-brand="og:image" content="" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="" />
+		<meta name="twitter:description" content="" />
+		<meta name="twitter:image" content="" />
+
+		<!-- The two faces used above the fold, fetched in parallel with the CSS. -->
+		<link
+			rel="preload"
+			href="/fonts/Vazirmatn-UI-FD-Regular.ttf"
+			as="font"
+			type="font/ttf"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="preload"
+			href="/fonts/IRANYekanXFaNum-Bold.ttf"
+			as="font"
+			type="font/ttf"
+			crossorigin="anonymous"
+		/>
+	</head>
+	<body>
+		<div id="root"></div>
+		<noscript>
+			<p style="padding: 2rem; font-family: Tahoma, sans-serif">
+				برای دیدن این سایت، JavaScript را در مرورگر خود فعال کنید.
+			</p>
+		</noscript>
+		<script type="module" src="/src/main.tsx"></script>
+	</body>
+</html>

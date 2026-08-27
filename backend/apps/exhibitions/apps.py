@@ -1,0 +1,7 @@
+from django.apps import AppConfig
+
+
+class ExhibitionsConfig(AppConfig):
+    default_auto_field = "django.db.models.BigAutoField"
+    name = "apps.exhibitions"
+    verbose_name = "نمایشگاه‌ها"

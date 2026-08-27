@@ -1,0 +1,41 @@
+# --- secrets ------------------------------------------------------------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.crt
+
+# --- python -------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+
+# --- django -------------------------------------------------------------
+backend/media/
+backend/staticfiles/
+backend/db.sqlite3
+*.log
+
+# --- node / vite --------------------------------------------------------
+node_modules/
+frontend/dist/
+frontend/.vite/
+admin/dist/
+.eslintcache
+
+# --- docker / ops -------------------------------------------------------
+backups/
+nginx/certs/
+certbot/
+
+# --- editors / os -------------------------------------------------------
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
